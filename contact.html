@@ -11,8 +11,7 @@
         <script type="text/javascript">
         (function(){
             emailjs.init("user_tgODbz6tEdS4GNWxkebcP");
-            emailjs.send("gmail", "contact_form", {name: "Pawel", notes: "this is it!"})
-        })();
+                    })();
     </script>
     </head>
     
@@ -73,7 +72,7 @@
                 
                 
                 <div class="center-form">
-                    <form>
+                    <form onsubmit="return sendMail(this);" method ="POST">
                         <input type="text" name="name" class="form-control" id="fullname" placeholder="name" required/>
                         <input type="text" name="emaiaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
                         <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary" placeholder="Project Description" required></textarea>
@@ -121,7 +120,8 @@
                     </div>
                 
             </footer>
-        
+            <script src="assets/js/sendEmail.js"></script>
+            
         
         
     </body>
